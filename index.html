@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProtoLearn</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/motion@10.15.5/dist/motion.min.js"></script>
 </head>
 <body>
     <nav class="navbar">
@@ -25,11 +26,36 @@
         </div>
     </nav>
     <div class="container">
-        <header class="hero">
-            <h1>ProtoLearn</h1>
-            
-            <a href="login.html" class="cta-button">Get Started</a>
-        </header>
+        <div class="hero-slider">
+            <div class="slider-container">
+                <div class="slide">
+                    <div class="slide-content">
+                        <h1>Transform Your Free Time</h1>
+                        <p>Turn timetable gaps into opportunities for growth.</p>
+                        <a href="login.html" class="cta-button">Get Started</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <h1>AI-Powered Recommendations</h1>
+                        <p>Discover personalized activities tailored to your goals.</p>
+                        <a href="#features" class="cta-button">Learn More</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <h1>Collaborate and Connect</h1>
+                        <p>Find study partners and work on projects together.</p>
+                        <a href="dashboard.html" class="cta-button">Demo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <button class="prev-btn">&lt;</button>
+                <button class="next-btn">&gt;</button>
+            </div>
+            <div class="slider-dots"></div>
+        </div>
 
         <section id="problem">
             <h2>The Problem of Wasted Time</h2>
