@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container dashboard-container">
+        <header class="dashboard-header">
+            <div class="user-info">
+                <h2>Welcome, Rahul</h2>
+                <p>Branch: CSBS</p>
+            </div>
+            <button id="logout-button" class="cta-button">Logout</button>
+        </header>
+
+        <main class="dashboard-main">
+            <section id="timetable" class="dashboard-section">
+                <h3>Today's Timetable</h3>
+                <ul class="timetable-list">
+                    <li>09:00 - 10:00: Math</li>
+                    <li class="free-slot">10:00 - 11:00: FREE</li>
+                    <li>11:00 - 12:00: AI</li>
+                </ul>
+            </section>
+
+            <section id="free-time" class="dashboard-section">
+                <h3>Detected Free Time</h3>
+                <div class="free-time-cards">
+                    <div class="card">60 mins</div>
+                </div>
+            </section>
+
+            <section id="recommendations" class="dashboard-section">
+                <h3>Recommended Activities</h3>
+                <div class="recommendations-grid">
+                    <div class="card">Learning: DSA Practice (45 mins)</div>
+                    <div class="card">Collaboration: Project Group Sync (30 mins)</div>
+                    <div class="card">Wellness: Guided Meditation (15 mins)</div>
+                </div>
+            </section>
+
+            <section id="weekly-schedule" class="dashboard-section">
+                <h3>Weekly Schedule Overview</h3>
+                <div id="schedule-grid-container" class="schedule-grid-container">
+                    <!-- Timetable will be dynamically generated here -->
+                </div>
+            </section>
+
+            <section id="activity-status" class="dashboard-section">
+                <h3>Activity Status</h3>
+                <ul class="status-list">
+                    <li>Pending: DSA Practice</li>
+                    <li>In Progress: Project Group Sync</li>
+                    <li>Completed: Guided Meditation</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>

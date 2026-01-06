@@ -1,0 +1,353 @@
+:root {
+    --neon-purple: #9D00FF;
+    --electric-blue: #00E5FF;
+    --cyan-highlight: #00BFFF;
+    --dark-background: #121212;
+    --light-text: #FFFFFF;
+    --dark-text: #333333;
+}
+
+body {
+    background-color: var(--dark-background);
+    color: var(--light-text);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar {
+    background-color: #1E1E1E;
+    padding: 1rem;
+    border-bottom: 1px solid var(--neon-purple);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--cyan-highlight);
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: var(--light-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--cyan-highlight);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: var(--light-text);
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, var(--neon-purple), var(--electric-blue));
+    border-radius: 15px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    background-color: var(--cyan-highlight);
+    color: var(--dark-text);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--electric-blue);
+}
+
+.cta-button-secondary {
+    background-color: transparent;
+    color: var(--light-text);
+    border: 1px solid var(--light-text);
+    padding: 10px 20px;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.cta-button-secondary:hover {
+    background-color: var(--light-text);
+    color: var(--dark-text);
+}
+
+section {
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    background-color: #1E1E1E;
+    border-radius: 15px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--cyan-highlight);
+}
+
+.steps, .features-grid, .recommendations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.step, .feature-card, .card {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Login Page */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    background-color: #1E1E1E;
+    padding: 40px;
+    border-radius: 15px;
+    width: 350px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Dashboard */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.dashboard-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.dashboard-section {
+    background-color: #1E1E1E;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.timetable-list .free-slot {
+    color: var(--cyan-highlight);
+    font-weight: bold;
+}
+
+/* Weekly Schedule */
+.schedule-grid-container {
+    display: grid;
+    grid-template-columns: 60px repeat(5, 1fr);
+    gap: 5px;
+}
+
+.schedule-day, .schedule-time, .schedule-slot {
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #2a2a2a;
+}
+
+.schedule-day, .schedule-time {
+    font-weight: bold;
+}
+
+.schedule-slot.free {
+    background-color: #1a2c3a;
+    border: 1px solid var(--cyan-highlight);
+    box-shadow: 0 0 8px var(--cyan-highlight);
+    cursor: pointer;
+    position: relative;
+}
+
+.schedule-slot.free .badge {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    background-color: var(--electric-blue);
+    color: var(--dark-text);
+    padding: 2px 4px;
+    font-size: 0.6em;
+    border-radius: 3px;
+}
+
+.schedule-slot .tooltip {
+    visibility: hidden;
+    width: 150px;
+    background-color: var(--dark-background);
+    color: var(--light-text);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 110%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border: 1px solid var(--neon-purple);
+}
+
+.schedule-slot.free:hover .tooltip, .schedule-slot.free:focus .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) { /* Tablet */
+    .dashboard-main {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #1E1E1E;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 1rem 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .steps, .features-grid, .recommendations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .login-box {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-header .user-info {
+        margin-bottom: 20px;
+    }
+
+    .schedule-grid-container {
+        grid-template-columns: 50px repeat(5, 120px);
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) { /* Small Mobile */
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 0.9em;
+        min-height: 44px;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+}
